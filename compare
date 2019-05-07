@@ -1,0 +1,11 @@
+#x=`cmp $1 $2`
+if cmp -s $1 $2 
+then
+	echo "Files are Identical"
+	rev $2 > output
+	cat output
+else
+	echo "Files are NotIdentical"
+	tr a-z A-Z < $1 > output
+	cat output
+fi

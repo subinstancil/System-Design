@@ -1,0 +1,6 @@
+x=$#
+for ((i=1;i<=$x;i++)); 
+do
+cat $1 > $2
+shift
+done

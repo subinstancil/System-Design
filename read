@@ -1,0 +1,10 @@
+x=1 
+while read LINE
+do 
+	if [[ $x -ge $2 && $x -le $3 ]] 
+	then
+		
+		echo $LINE
+	fi
+	x=`expr $x + 1`
+done < $1
